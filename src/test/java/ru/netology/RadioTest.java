@@ -17,6 +17,62 @@ class RadioTest {
         assertEquals(expected, actual);
 
     }
+    @Test
+    public void shouldSetDemandRadioStation1() {
+        Radio rad = new Radio();
+        rad.setCurrentRadioStation(1);
+
+        int actual = rad.getCurrentRadioStation();
+        int expected = 1;
+
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void shouldSetDemandRadioStation0() {
+        Radio rad = new Radio();
+        rad.setCurrentRadioStation(0);
+
+        int actual = rad.getCurrentRadioStation();
+        int expected = 0;
+
+        assertEquals(expected, actual);
+
+    }
+    @Test
+    public void shouldSetDemandRadioStationLessThan0() {
+        Radio rad = new Radio();
+        rad.setCurrentRadioStation(-1);
+
+        int actual = rad.getCurrentRadioStation();
+        int expected = 0;
+
+        assertEquals(expected, actual);
+
+    }
+    @Test
+    public void shouldSetDemandRadioStationLessThanZero() {
+        Radio rad = new Radio();
+        rad.setCurrentRadioStation(-2);
+
+        int actual = rad.getCurrentRadioStation();
+        int expected = 0;
+
+        assertEquals(expected, actual);
+
+    }
+    @Test
+    public void shouldSetDemandRadioStation9() {
+        Radio rad = new Radio();
+        rad.setCurrentRadioStation(9);
+
+        int actual = rad.getCurrentRadioStation();
+        int expected = 9;
+
+        assertEquals(expected, actual);
+
+    }
 
     @Test
     public void shouldSet0ThenMoreThan9() {
